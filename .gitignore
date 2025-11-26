@@ -1,0 +1,13 @@
+# Các file rác của IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Thư mục biên dịch (nặng lắm, không up lên)
+target/
+out/
+
+# Các file hệ thống
+.DS_Store
+Thumbs.db
+

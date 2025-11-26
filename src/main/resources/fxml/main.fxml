@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.library.controller.MainController"
+      spacing="10"
+      style="-fx-padding: 0; -fx-background-color: #ecf0f1;"
+      prefHeight="700.0" prefWidth="1200.0">
+
+    <HBox style="-fx-background-color: #2c3e50; -fx-padding: 15;" alignment="CENTER_LEFT">
+        <Label text="HỆ THỐNG QUẢN LÝ THƯ VIỆN"
+               style="-fx-font-size: 20; -fx-font-weight: bold; -fx-text-fill: white;">
+        </Label>
+        <Region HBox.hgrow="ALWAYS"/>
+        <Label fx:id="lblWelcome" text="Xin chào, Admin" style="-fx-text-fill: #bdc3c7; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <TabPane fx:id="mainTabPane" VBox.vgrow="ALWAYS" tabClosingPolicy="UNAVAILABLE"
+             style="-fx-background-color: transparent;">
+
+        <Tab text="📚 Quản lý Sách" style="-fx-font-weight: bold;">
+            <content>
+                <fx:include source="book_management.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="📊 Thống kê" style="-fx-font-weight: bold;">
+            <content>
+                <fx:include source="statistics.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="👥 Thành viên" style="-fx-font-weight: bold;">
+            <content>
+                <fx:include source="member_management.fxml"/>
+            </content>
+        </Tab>
+
+        <Tab text="🔄 Mượn / Trả" style="-fx-font-weight: bold;">
+            <content>
+                <fx:include source="borrow_return.fxml"/>
+            </content>
+        </Tab>
+
+    </TabPane>
+</VBox>
